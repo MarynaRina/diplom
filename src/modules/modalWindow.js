@@ -1,10 +1,7 @@
 /* eslint-disable strict */
 'use strict';
 
-import scrollUp from "./scrollUp";
-
 //Scroll Block
-
 const disableScroll = () => {
     const widthScroll = window.innerWidth - document.body.offsetWidth;
     document.body.dbScrollY = window.scrollY;
