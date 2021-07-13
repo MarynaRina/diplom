@@ -1,6 +1,8 @@
 /* eslint-disable strict */
 'use strict';
 
+import scrollUp from "./scrollUp";
+
 //Scroll Block
 
 const disableScroll = () => {
@@ -47,7 +49,6 @@ const modalWindow = () => {
     modalClose.addEventListener('click', () => {
         modal.style.display = 'none';
         modalOverlay.style.display = 'none';
-        upBtn.style.display = 'block';
         enableScroll();
     });
 };
