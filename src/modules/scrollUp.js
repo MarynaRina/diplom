@@ -13,13 +13,12 @@ const scrollUp = () => {
         }
     });
 
-    function scrollToTop() {
+    upBtn.addEventListener("click", () => {
         rootElement.scrollTo({
             top: 0,
             behavior: "smooth"
         });
-    }
-    upBtn.addEventListener("click", scrollToTop);
+    });
 
 };
 
