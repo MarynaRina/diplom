@@ -19,9 +19,6 @@ const disableScroll = () => {
 
 const enableScroll = () => {
     document.body.style.cssText = '';
-    window.scroll({
-        top: document.body.dbScrollY
-    });
 };
 
 const modalWindow = () => {
@@ -42,7 +39,6 @@ const modalWindow = () => {
             if (!target) {
                 modal.style.display = 'none';
                 modalOverlay.style.display = 'none';
-                upBtn.style.display = 'block';
                 enableScroll();
             }
         }
