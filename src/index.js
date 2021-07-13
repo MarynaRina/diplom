@@ -4,13 +4,13 @@
 import accordeon from "./modules/accordeon";
 import carousel from "./modules/carousel";
 import modalWindow from "./modules/modalWindow";
-import scrollDowm from "./modules/scrollDown";
+import scrollDown from "./modules/scrollDown";
 import scrollUp from "./modules/scrollUp";
 import sendForm from "./modules/sendForm";
 import topSlider from "./modules/topSlider";
 
 // scroll down
-scrollDowm();
+scrollDown();
 
 //scroll up
 scrollUp();
