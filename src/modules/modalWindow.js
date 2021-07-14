@@ -3,21 +3,11 @@
 
 //Scroll Block
 const disableScroll = () => {
-    const widthScroll = window.innerWidth - document.body.offsetWidth;
-    document.body.dbScrollY = window.scrollY;
-    document.body.style.cssText = `
-        position: fixed;
-        top: ${-window.scrollY}px;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-        padding-right: ${widthScroll}px;
-    `;
+    document.querySelector("body").style.overflow = 'hidden';
 };
 
 const enableScroll = () => {
-    document.body.style.cssText = '';
+    document.querySelector("body").style.overflow = 'visible';
 };
 
 const modalWindow = () => {
@@ -27,6 +17,7 @@ const modalWindow = () => {
     const upBtn = document.querySelector('.up');
 
     window.addEventListener('click', e => {
+        e.preventDefault();
         let target = e.target;
         if (target.matches('.callback-btn') || target.matches('.button-services')) {
             modal.style.display = 'block';

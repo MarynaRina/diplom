@@ -1,7 +1,7 @@
 /* eslint-disable strict */
 'use strict';
 
-import accordeon from "./modules/accordeon";
+import accordion from "./modules/accordion";
 import carousel from "./modules/carousel";
 import modalWindow from "./modules/modalWindow";
 import scrollDown from "./modules/scrollDown";
@@ -22,7 +22,7 @@ modalWindow();
 topSlider();
 
 // accordeon
-accordeon();
+accordion();
 
 // carousel
 carousel();
