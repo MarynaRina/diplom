@@ -2,31 +2,18 @@
 'use strict';
 
 const accordion = () => {
-    const accordeon = document.querySelector('.accordeon'),
-        titles = accordeon.querySelectorAll('.title'),
-        elemContent = accordeon.querySelectorAll('.element-content');
+    const titles = document.querySelectorAll(".accordeon .title");
+    titles.forEach(title => title.addEventListener("click", () => {
 
-    titles.forEach(title => {
-        title.addEventListener("click", e => {
-            elemContent.forEach(elem => {
-                if (e.target.nextElementSibling !== elem &&
-                    elem.classList.contains("active")) {
-                    elem.classList.remove("active");
-                    titles.forEach(title => title.classList.remove("active"));
-                }
-            });
-            const panel = title.nextElementSibling;
-            panel.classList.toggle("active");
-            title.classList.toggle("active");
-        });
-    });
-
-    window.onclick = e => {
-        if (!e.target.matches(".element-title")) {
-            titles.forEach(title => title.classList.remove("active"));
-            elemContent.forEach(elem => elem.classList.remove("active"));
+        if (title.parentNode.classList.contains("active")) {
+            title.parentNode.classList.toggle("active");
+            document.querySelector('.element-content').style.display = 'none';
+        } else {
+            titles.forEach(title => title.parentNode.classList.remove("active"));
+            title.parentNode.classList.add("active");
         }
-    };
+
+    }));
 };
 
 export default accordion;

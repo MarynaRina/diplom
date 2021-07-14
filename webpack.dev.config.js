@@ -4,7 +4,10 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'dev-bundle.js',
-        path: path.resolve(__dirname, './dist')
+        path: path.resolve(__dirname, './dist'),
+        clean: {
+            dry: true,
+        }
     },
     mode: 'development',
     devServer: {
