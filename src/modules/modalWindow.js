@@ -11,15 +11,15 @@ const enableScroll = () => {
 };
 
 const modalWindow = () => {
-    const modal = document.querySelector('.modal-callback');
-    const modalClose = document.querySelector('.modal-close');
-    const modalOverlay = document.querySelector('.modal-overlay');
-    const upBtn = document.querySelector('.up');
+    const modal = document.querySelector('.modal-callback'),
+        modalClose = document.querySelector('.modal-close'),
+        modalOverlay = document.querySelector('.modal-overlay'),
+        upBtn = document.querySelector('.up');
 
     window.addEventListener('click', e => {
         e.preventDefault();
         let target = e.target;
-        if (target.matches('.callback-btn') || target.matches('.button-services')) {
+        if (target.matches('.callback-btn') || target.matches('.button-services') || target.matches('.absolute')) {
             modal.style.display = 'block';
             modalOverlay.style.display = 'block';
             upBtn.style.display = 'none';
@@ -39,6 +39,7 @@ const modalWindow = () => {
         modalOverlay.style.display = 'none';
         enableScroll();
     });
+
 };
 
 export default modalWindow;

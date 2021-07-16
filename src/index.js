@@ -25,7 +25,7 @@ topSlider();
 accordion();
 
 // carousel
-carousel();
+carousel.init();
 
 // send form
 sendForm();
