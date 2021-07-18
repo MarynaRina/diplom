@@ -8,6 +8,7 @@ import scrollDown from "./modules/scrollDown";
 import scrollUp from "./modules/scrollUp";
 import sendForm from "./modules/sendForm";
 import topSlider from "./modules/topSlider";
+import validation from "./modules/validation";
 
 // scroll down
 scrollDown();
@@ -29,3 +30,6 @@ carousel.init();
 
 // send form
 sendForm();
+
+// validation
+validation();

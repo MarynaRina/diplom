@@ -17,7 +17,6 @@ const modalWindow = () => {
         upBtn = document.querySelector('.up');
 
     window.addEventListener('click', e => {
-        e.preventDefault();
         let target = e.target;
         if (target.matches('.callback-btn') || target.matches('.button-services') || target.matches('.absolute')) {
             modal.style.display = 'block';
